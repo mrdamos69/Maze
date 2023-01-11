@@ -29,7 +29,7 @@
      </font>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="pushButton_open">
     <property name="geometry">
      <rect>
       <x>550</x>
@@ -68,7 +68,7 @@
     </property>
     <layout class="QHBoxLayout" name="horizontalLayout">
      <item>
-      <widget class="QRadioButton" name="radioButton">
+      <widget class="QRadioButton" name="radioButton_maze">
        <property name="font">
         <font>
          <pointsize>10</pointsize>
@@ -83,7 +83,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QRadioButton" name="radioButton_2">
+      <widget class="QRadioButton" name="radioButton_cave">
        <property name="font">
         <font>
          <pointsize>10</pointsize>
@@ -96,99 +96,75 @@
      </item>
     </layout>
    </widget>
-   <widget class="QPushButton" name="pushButton_2">
-    <property name="geometry">
-     <rect>
-      <x>530</x>
-      <y>60</y>
-      <width>151</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>10</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>Maze generator</string>
-    </property>
-   </widget>
-   <widget class="QCheckBox" name="checkBox">
-    <property name="geometry">
-     <rect>
-      <x>530</x>
-      <y>100</y>
-      <width>102</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>10</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>Random size maze</string>
-    </property>
-   </widget>
    <widget class="QWidget" name="gridLayoutWidget">
     <property name="geometry">
      <rect>
       <x>529</x>
-      <y>120</y>
+      <y>110</y>
       <width>151</width>
-      <height>51</height>
+      <height>72</height>
      </rect>
     </property>
     <layout class="QGridLayout" name="gridLayout">
-     <item row="1" column="1">
-      <widget class="QSpinBox" name="spinBox_2">
-       <property name="minimum">
-        <number>10</number>
-       </property>
-       <property name="maximum">
-        <number>500</number>
-       </property>
-       <property name="value">
-        <number>10</number>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="1">
-      <widget class="QSpinBox" name="spinBox">
-       <property name="minimum">
-        <number>10</number>
-       </property>
-       <property name="maximum">
-        <number>500</number>
-       </property>
-       <property name="value">
-        <number>10</number>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="0">
-      <widget class="QLabel" name="label">
+     <item row="1" column="0">
+      <widget class="QLabel" name="label_height">
        <property name="text">
         <string>Height</string>
        </property>
       </widget>
      </item>
-     <item row="1" column="0">
-      <widget class="QLabel" name="label_2">
+     <item row="2" column="1">
+      <widget class="QSpinBox" name="spinBox_width">
+       <property name="minimum">
+        <number>10</number>
+       </property>
+       <property name="maximum">
+        <number>500</number>
+       </property>
+       <property name="value">
+        <number>10</number>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QSpinBox" name="spinBox_height">
+       <property name="minimum">
+        <number>10</number>
+       </property>
+       <property name="maximum">
+        <number>500</number>
+       </property>
+       <property name="value">
+        <number>10</number>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="label_width">
        <property name="text">
         <string>Width</string>
        </property>
       </widget>
      </item>
+     <item row="0" column="0" colspan="2">
+      <widget class="QCheckBox" name="checkBox_randon">
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Random size maze</string>
+       </property>
+      </widget>
+     </item>
     </layout>
    </widget>
-   <widget class="QPushButton" name="pushButton_3">
+   <widget class="QPushButton" name="pushButton_run">
     <property name="geometry">
      <rect>
       <x>530</x>
-      <y>190</y>
+      <y>200</y>
       <width>151</width>
       <height>41</height>
      </rect>
@@ -201,6 +177,42 @@
     <property name="text">
      <string>Solve maze</string>
     </property>
+   </widget>
+   <widget class="QWidget" name="verticalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>529</x>
+      <y>50</y>
+      <width>151</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QPushButton" name="pushButton_gen">
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Maze generator</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_save">
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Save maze</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">

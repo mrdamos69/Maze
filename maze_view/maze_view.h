@@ -15,6 +15,11 @@ public:
     maze_view(QWidget *parent = nullptr);
     ~maze_view();
 
+private slots:
+    void on_pushButton_open_clicked();
+
+    void on_pushButton_save_clicked();
+
 private:
     Ui::maze_view *ui;
 };

@@ -13,3 +13,15 @@ maze_view::~maze_view()
     delete ui;
 }
 
+
+void maze_view::on_pushButton_open_clicked()
+{
+
+}
+
+
+void maze_view::on_pushButton_save_clicked()
+{
+
+}
+
