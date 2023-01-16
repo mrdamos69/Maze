@@ -6,6 +6,12 @@ maze_view::maze_view(QWidget *parent)
     , ui(new Ui::maze_view)
 {
     ui->setupUi(this);
+    scene = new QGraphicsScene();
+    ui->graphicsView->setScene(scene);
+    scene->addLine(0,255,0,-255);
+    scene->addLine(255,0,-255, 0);
+    ui->graphicsView->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+    ui->graphicsView->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
 }
 
 maze_view::~maze_view()

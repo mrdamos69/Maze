@@ -2,6 +2,13 @@
 #define MAZE_VIEW_H
 
 #include <QMainWindow>
+#include <math.h>
+
+#include <QFileDialog>
+#include <QGraphicsScene>
+#include <QMessageBox>
+#include <QMouseEvent>
+#include <QWidget>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class maze_view; }
@@ -22,5 +29,6 @@ private slots:
 
 private:
     Ui::maze_view *ui;
+    QGraphicsScene *scene;
 };
 #endif // MAZE_VIEW_H
