@@ -8,8 +8,13 @@ maze_view::maze_view(QWidget *parent)
     ui->setupUi(this);
     scene = new QGraphicsScene();
     ui->graphicsView->setScene(scene);
-    scene->addLine(0,255,0,-255);
-    scene->addLine(255,0,-255, 0);
+
+    for (int i = 0; i < 10; i++) {
+        for (int j = 0; j < 10; j++) {
+            scene->addLine(i, j, -i, -j);
+        }
+    }
+
     ui->graphicsView->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     ui->graphicsView->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
 }
@@ -19,6 +24,10 @@ maze_view::~maze_view()
     delete ui;
 }
 
+void maze_view::print_maze() {
+    scene->clear();
+    //
+}
 
 void maze_view::on_pushButton_open_clicked()
 {

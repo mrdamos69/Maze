@@ -3,12 +3,14 @@
 
 #include <QMainWindow>
 #include <math.h>
+#include <ctime>
 
 #include <QFileDialog>
 #include <QGraphicsScene>
 #include <QMessageBox>
 #include <QMouseEvent>
 #include <QWidget>
+
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class maze_view; }
@@ -21,6 +23,7 @@ class maze_view : public QMainWindow
 public:
     maze_view(QWidget *parent = nullptr);
     ~maze_view();
+    void print_maze();
 
 private slots:
     void on_pushButton_open_clicked();
